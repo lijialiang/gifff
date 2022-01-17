@@ -1,4 +1,4 @@
-# Gif First Frame
+# Gif First Frame ![](https://img.shields.io/npm/v/gifff?style=flat-square) ![](https://img.shields.io/npm/l/gifff?style=flat-square)
 
 Use `wasm` to capture the first frame of a Gif image.
 
