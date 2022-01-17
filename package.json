@@ -1,6 +1,6 @@
 {
   "name": "gifff",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "get the first frame of a Gif image",
   "keywords": [
     "wasm",
