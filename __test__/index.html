@@ -1,0 +1,25 @@
+<p>
+  <input id="input" type="file" accept="image/gif" />
+</p>
+
+<p>
+  <img id="img">
+</p>
+
+<script src="index.js"></script>
+
+<script>
+  const render = async (file) => {
+    const base64 = await window.Gifff(file)
+    document.getElementById('img').src = base64
+  }
+
+  render('1.gif')
+
+  document.getElementById('input').onchange = event => {
+    if (event.target.files.length > 0) {
+      const gif = event.target.files[0]
+      render(gif)
+    }
+  }
+</script>
