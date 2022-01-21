@@ -36,7 +36,7 @@ document.getElementById('img').src = URL.createObjectURL(blob)
 import gifff from 'gifff/wasm'
 
 /**
- * Get Gif First Frame
+ * Use `WebAssembly` to get Gif First Frame
  *
  * @param {string|File} file - GifHttpUrl or GifLocalFile
  * @param {undefined|Object} options
