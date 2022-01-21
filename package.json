@@ -1,6 +1,6 @@
 {
   "name": "gifff",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Get the first frame of a Gif image",
   "keywords": [
     "gifff",
@@ -27,7 +27,6 @@
     "wasm.js",
     "canvas.js"
   ],
-  "types": "dist/index.d.ts",
   "scripts": {
     "build:wasm": "wasm-pack build --release --target=web",
     "build:ts": "cross-env NODE_ENV=production rollup -c",
