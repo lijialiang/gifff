@@ -1,16 +1,13 @@
-<p>
-  <input id="input" type="file" accept="image/gif" />
-</p>
+<p><input id="input" type="file" accept="image/gif" /></p>
+<p><img id="img"></p>
 
-<p>
-  <img id="img">
-</p>
-
-<script src="index.js"></script>
+<script src="wasm.js"></script>
 
 <script>
   const render = async (file) => {
-    const base64 = await window.Gifff(file)
+    console.time('render')
+    const blob = await window.Gifff(file)
+    console.timeEnd('render')
     document.getElementById('img').src = base64
   }
 

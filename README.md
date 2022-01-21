@@ -1,8 +1,6 @@
 # Gif First Frame ![](https://img.shields.io/npm/v/gifff?style=flat-square) ![](https://img.shields.io/npm/l/gifff?style=flat-square)
 
-Use `wasm` to capture the first frame of a Gif image.
-
-[DEMO](https://stackblitz.com/edit/gif-first-frame?file=index.html)
+Get the first frame of a Gif image.
 
 ## Install
 
@@ -15,8 +13,27 @@ npm install gifff
 
 ## Usage
 
+### HTMLCanvasElement
+
 ```ts
-import gifff from 'gifff'
+import gifff from 'gifff/canvas'
+
+/**
+ * Use `HTMLCanvasElement` to get Gif First Frame
+ *
+ * @param {string|File} file - GifHttpUrl or GifLocalFile
+ * @returns {Promise<Blob>} PNG Blob
+ */
+const blob = await gifff(Gif)
+document.getElementById('img').src = URL.createObjectURL(blob)
+```
+
+[Playground](https://jsbin.com/mowejon)
+
+### WebAssembly
+
+```ts
+import gifff from 'gifff/wasm'
 
 /**
  * Get Gif First Frame
@@ -29,7 +46,10 @@ import gifff from 'gifff'
 const base64 = await gifff(Gif, {
   wasm: WASM_PATH
 })
+document.getElementById('img').src = base64
 ```
+
+[Playground](https://jsbin.com/segunap)
 
 ## LICENSE
 

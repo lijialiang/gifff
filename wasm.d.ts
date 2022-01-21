@@ -2,7 +2,7 @@ declare const _default: (file: string | File, options?: {
     wasm?: string | undefined;
 } | undefined) => Promise<string>;
 /**
- * Get Gif First Frame
+ * Use `WebAssembly` to get Gif First Frame
  *
  * @param {string|File} file - GifHttpUrl or GifLocalFile
  * @param {undefined|Object} options

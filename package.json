@@ -1,8 +1,10 @@
 {
   "name": "gifff",
   "version": "0.0.2",
-  "description": "get the first frame of a Gif image",
+  "description": "Get the first frame of a Gif image",
   "keywords": [
+    "gifff",
+    "canvas",
     "wasm",
     "webassembly",
     "rust",
@@ -20,7 +22,10 @@
   "author": "lijialiangdev@gmail.com",
   "license": "MIT",
   "files": [
-    "dist"
+    "gifff_bg.wasm",
+    "*.d.ts",
+    "wasm.js",
+    "canvas.js"
   ],
   "types": "dist/index.d.ts",
   "scripts": {
@@ -28,7 +33,7 @@
     "build:ts": "cross-env NODE_ENV=production rollup -c",
     "dev:serve": "cross-env NODE_ENV=test rollup -c -w",
     "cp:wasm:test": "cp pkg/gifff_bg.wasm __test__/gifff_bg.wasm",
-    "cp:wasm:release": "cp pkg/gifff_bg.wasm dist/gifff_bg.wasm",
+    "cp:wasm:release": "cp pkg/gifff_bg.wasm ./gifff_bg.wasm",
     "test": "run-s build:wasm cp:wasm:test dev:serve",
     "prepack": "run-s build:wasm build:ts cp:wasm:release"
   },
